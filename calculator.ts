@@ -9,7 +9,7 @@ export function handleAction(action: string): void {
       display.textContent = "0";
   } else if (action === "=") {
       try {
-          const expr = display.textContent!.replace(/÷/g, '/');
+          const expr = display.textContent!.trim().replace(/÷/g, '/');
           if (SAFE_EXPR.test(expr)) {
               display.textContent = String(new Function(`return ${expr}`)());
           }

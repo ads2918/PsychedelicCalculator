@@ -59,13 +59,16 @@ if (root) {
             '+': '+', '-': '-', '*': '*', '/': '÷',
             '%': '%', '.': '.',
             'Enter': '=',
+            '=': '=',
             'Backspace': 'delete',
             'Escape': 'clear',
         };
 
         const action = keyMap[e.key];
         if (action) {
-           handleAction(action)
+            e.preventDefault();
+            (document.activeElement as HTMLElement)?.blur();
+            handleAction(action);
         }
     });
 }
