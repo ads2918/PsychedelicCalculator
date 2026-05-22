@@ -17,7 +17,7 @@ describe('handleAction', () => {
     handleAction('clear');
     expect(display?.textContent).toBe('0');
   });
-
+ 
   test('evaluates expression on equals', () => {
     const display = document.getElementById('display');
     if (display) display.textContent = '2+3*4';
