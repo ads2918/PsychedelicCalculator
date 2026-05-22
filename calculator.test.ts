@@ -34,7 +34,7 @@ describe('handleAction', () => {
 
   test('evaluates division', () => {
     const display = document.getElementById('display');
-    if(display) display.textContent = '9/3';
+    if(display) display.textContent = '9/43';
     handleAction('=');
     expect(display?.textContent).toBe('3');
   });
